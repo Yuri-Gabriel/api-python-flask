@@ -1,4 +1,4 @@
-## Simples API com Python 
+## Book API
 
 Api utilizando micro framework [Flask](https://flask.palletsprojects.com/en/2.3.x/) para gerenciamento de livros.
 
@@ -12,10 +12,8 @@ Api utilizando micro framework [Flask](https://flask.palletsprojects.com/en/2.3.
 ### Instalação 
 
 - Faça download do [python](https://www.python.org/downloads/).
-
 - Com o python instalado instale o Flask executando no terminal: ` pip install Flask `
-
-- Por fim execute o proejto ` python app.py `
+- Por fim execute o proejto: ` python app.py `
 
 ### Contato
 

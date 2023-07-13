@@ -12,7 +12,7 @@ Api utilizando micro framework [Flask](https://flask.palletsprojects.com/en/2.3.
 ### Instalação 
 
 - Faça download do [python](https://www.python.org/downloads/).
-- Com o python instalado instale o Flask executando no terminal: ` pip install Flask `
+- Instale o Flask executando no terminal: ` pip install Flask `
 - Por fim execute o proejto: ` python app.py `
 
 ### Contato

@@ -1,8 +1,14 @@
+image: python:3
+
 stages: 
   - start_venv
   - install
   - tests
   - build
+
+before_script:
+  - pip install --upgrade pip
+  - pip install -r requirements.txt
   
 start_venv:
   stage: start_venv
@@ -12,7 +18,7 @@ start_venv:
 install:
   stage: install
   script:
-    - pip install -r requirements.txt
+    - python -m pip install -r requirements.txt
 
 tests:
   stage: tests
@@ -20,6 +26,6 @@ tests:
     - python -m pytest tests/test_api.py
 
 build:
-  stage: install
+  stage: build
   script:
-    - pyhton app.py
+    - docker build -t api-pyhton-flask .

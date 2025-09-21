@@ -7,10 +7,6 @@ variables:
   DOCKER_HOST: tcp://docker:2375/
   DOCKER_TLS_CERTDIR: ""
 
-before_script:
-  - pip install --upgrade pip
-  - pip install -r requirements.txt
-
 stages: 
   - install
   - tests
@@ -26,6 +22,8 @@ install:
 tests:
   stage: tests
   script:
+    - pip install --upgrade pip
+    - pip install -r requirements.txt
     - python -m pytest tests/test_api.py
 
 build:

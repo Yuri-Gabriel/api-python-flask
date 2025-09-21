@@ -11,15 +11,18 @@ start_venv:
 
 install:
   stage: install
+  image: python:3
   script:
-    - pyhton -m pip install -r requirements.txt
+    - python -m pip install -r requirements.txt
 
 tests:
   stage: tests
+  image: python:3
   script:
     - python -m pytest tests/test_api.py
 
 build:
   stage: build
+  image: python:3
   script:
-    - pyhton app.py
+    - python app.py

@@ -15,6 +15,11 @@ Api utilizando micro framework [Flask](https://flask.palletsprojects.com/en/2.3.
 - Instale o Flask executando no terminal: ` pip install Flask `
 - Por fim execute o proejto: ` python app.py `
 
+### Testes
+
+- Rodar os testes: `python -m pytest tests/test_api.py`
+- Gerar relatório html: `coverage html`
+
 ### Contato
 
 <a href="https://www.linkedin.com/in/vitor-santos-01/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a>      

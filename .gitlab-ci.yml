@@ -15,6 +15,7 @@ stages:
   - install
   - tests
   - build
+  - deploy
 
 install:
   stage: install
@@ -32,3 +33,13 @@ build:
   script:
     - apt-get update && apt-get install -y docker.io
     - docker build -t api-python-flask .
+
+deploy:
+  stage: deploy
+  image: node:20
+  script:
+    - npm i -g vercel
+    - vercel --token $VERCEL_TOKEN --prod --confirm
+  only:
+    - master
+  when: on_success

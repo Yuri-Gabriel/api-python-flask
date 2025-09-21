@@ -1,0 +1,25 @@
+stages: 
+  - start_venv
+  - install
+  - tests
+  - build
+  
+start_venv:
+  stage: start_venv
+  script:
+    - source .venv/bin/activate
+
+install:
+  stage: install
+  script:
+    - pip install -r requirements.txt
+
+tests:
+  stage: tests
+  script:
+    - python -m pytest tests/test_api.py
+
+build:
+  stage: install
+  script:
+    - pyhton app.py

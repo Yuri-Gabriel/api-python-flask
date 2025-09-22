@@ -41,4 +41,4 @@ jobs:
         with:
           node-version: '18'
       - name: deploy
-        run: npm i -g vercel && vercel --token $VERCEL_TOKEN --prod --confirm
+        run: npm i -g vercel && vercel --token ${{ secrets.VERCEL_TOKEN }} --prod --confirm

@@ -18,6 +18,7 @@ Api utilizando micro framework [Flask](https://flask.palletsprojects.com/en/2.3.
 ### Testes
 
 - Rodar os testes: `python -m pytest tests/test_api.py`
+- Rodar testes com o cov: `python -m pytest tests/test_api.py --cov=controller`
 - Gerar relatório html: `coverage html`
 
 ### Contato

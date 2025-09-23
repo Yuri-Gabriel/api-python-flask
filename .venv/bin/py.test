@@ -1,4 +1,4 @@
-#!/home/diuri/Documentos/Codigos/api-python-flask/.venv/bin/python3
+#!/workspaces/api-python-flask/.venv/bin/python
 # -*- coding: utf-8 -*-
 import re
 import sys

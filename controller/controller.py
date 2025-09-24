@@ -17,7 +17,7 @@ books = [
 
 @user_bp.route('/', methods=['GET'])
 def index():
-    return '<h1>Books API</h1>' 
+    return '<h1>Books API</h1><br><h1>TESTE API</h1>' 
 
 @user_bp.route('/book', methods=['GET'])
 def show_books():

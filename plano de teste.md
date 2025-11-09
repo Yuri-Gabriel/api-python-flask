@@ -2,43 +2,38 @@
 
 **API Python Flask**
 
-*versão 1.0*
+_versão 1.0_
 
 ## Histórico das alterações
 
-   Data    | Versão |    Descrição   | Autores
------------|--------|----------------|-----------------
-08/11/2025 |  1.0   | Release incial | Arthur Gabriel Palmeira Teixeira<br>Emilly Silva Marques dos Santos<br>Isabel de Oliveira Passos Alves<br>Vitor de Jesus dos Santos<br>Yuri Gabriel Ferreira de Jesus Menezes
-
+| Data       | Versão | Descrição      | Autores                                                                                                                                                                       |
+| ---------- | ------ | -------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 08/11/2025 | 1.0    | Release inicial | Arthur Gabriel Palmeira Teixeira<br>Emilly Silva Marques dos Santos<br>Isabel de Oliveira Passos Alves<br>Vitor de Jesus dos Santos<br>Yuri Gabriel Ferreira de Jesus Menezes |
 
 ## 1 - Introdução
 
-**Modificar texto**
-Este documento descreve os requisitos a testar, os  tipos de testes definidos para cada iteração, os recursos de hardware e software a serem empregados e o cronograma dos testes ao longo do projeto. As seções referentes aos requisitos, recursos e cronograma servem para permitir ao gerente do projeto acompanhar a evolução dos testes.
+Este documento descreve os requisitos a testar no projeto Book API, os tipos de testes definidos para cada iteração, os recursos de hardware e software a serem utilizados e o cronograma de execução ao longo do desenvolvimento da aplicação. A Book API, desenvolvida com o microframework Flask (python), tem como objetivo gerenciar livros, permitindo operações de consulta, cadastro, edição e exclusão.
 
-Com esse documento, você deve:
-- Identificar informações de projeto existentes e os componentes de software que devem ser testados.
-- Listar os Requisitos a testar.
-- Recomendar e descrever as estratégias de teste a serem empregadas.
-- Identificar os recursos necessários e prover uma estimativa dos esforços de teste.
-- Listar os elementos resultantes do projeto de testes.
+Com esse documento, deve ser:
+
+- Identificado as informações do projeto e os componentes de software da API a serem testados.
+- Listado os requisitos relacionados às funcionalidades de gerenciamento de livros.
+- Visualizado forma como ocorreu testes unitários, de performance e de carga.
+- Identificado os recursos necessários para a execução dos testes.
+- Listado os resultados obtidos através dos testes.
 
 ## 2 - Tipos de teste
 
-**Modificar texto**
-Esta seção deve contém os tipos de testes escolhidos para cada iteração do projeto.
-Pode-se definir inicialmente apenas os tipos de testes que serão usadas na próxima iteração, mas é possível também já registrar eventuais tipos de teste que se espera utilizar nas demais iterações. 
-Com base no guia de testes, indique os tipos de testes que melhor se adéquam aos requisitos, tipo da aplicação e seus recursos disponíveis e, caso necessário complemente ou forneça mais detalhes da técnica e dos critérios de completude sugeridos no guia para cada tipo de teste indicado.
+Os testes foram selecionados considerando as funcionalidades principais: consultar, cadastrar, editar e deletar livros; bem como os requisitos de desempenho, integração e confiabilidade da aplicação.
 
 - Teste de carga;
-- Teste de integração;
+- Teste de integração dos componentes;
 - Teste de instalação;
-- Teste de performance;
 - Teste unitário.
 
 ### 3.1 - Teste de carga
 
-Objetivo de avaliar como um sistema se comporta sob uma carga de trabalho esperada, simulando o uso real e simultâneo de usuários para identificar gargalos, medir o tempo de resposta, garantir a estabilidade e determinar se os padrões de desempenho do sistema são atendidos.
+Tem como objetivo avaliar o comportamento da API sob múltiplas requisições simultâneas, verificando se mantém estabilidade, tempo de resposta adequado e disponibilidade durante picos de uso.
 
 <br/>
 <table>
@@ -212,10 +207,9 @@ Objetivo de descobrir falhas de interface e garantir que as partes do sistema fu
 </table>
 <br/>
 
-
 ### 3.3 - Teste de instalação
 
-Objetivo de verificar se o software está instalado como planejado, em diferentes hardwares e sob diferentes condições, como pouco espaço  de memória, interrupções de rede, interrupções na instalação.
+Objetivo de verificar se o software está instalado como planejado, em diferentes hardwares e sob diferentes condições, como pouco espaço de memória, interrupções de rede, interrupções na instalação.
 
 <br/>
 <table>
@@ -312,7 +306,6 @@ Objetivo de verificar se o software está instalado como planejado, em diferente
     </tr>
 </table>
 <br/>
-
 
 ### 3.4 - Teste unitário
 
@@ -442,14 +435,14 @@ Foi utilizado como sistema operacional Linux debian em um athlon 3000G 3.5GHz co
 
 ### 4.2 - Ferramenta de teste
 
-As ferramentas usadas foram o locust (teste de carga) e o pytest (demais testes) 
+As ferramentas usadas foram o locust (teste de carga) e o pytest (demais testes)
 
 ## 5 - Cronograma
 
-| Tipo de teste | data de início | data de término |
-|:---:          |:---:           |:---:            |
-planejar teste     | 05/11/2025     | 05/11/2025   |
-projetar teste     | 06/11/2025     | 06/11/2025   |
-implementar teste  | 07/11/2025     | 07/11/2025   |
-executar teste     | 08/11/2025     | 08/11/2025   |
-avaliar teste      | 08/11/2025     | 08/11/2025   |
+|   Tipo de teste   | data de início | data de término |
+| :---------------: | :------------: | :-------------: |
+|  planejar teste   |   05/11/2025   |   05/11/2025    |
+|  projetar teste   |   06/11/2025   |   06/11/2025    |
+| implementar teste |   07/11/2025   |   07/11/2025    |
+|  executar teste   |   08/11/2025   |   08/11/2025    |
+|   avaliar teste   |   08/11/2025   |   08/11/2025    |

@@ -10,7 +10,7 @@ class BookAPIUser(HttpUser):
         """Executado quando usuário inicia"""
         self.livro_counter = 0
     
-    @task(3)  # Peso 3 - executado 3x mais
+    @task(3) 
     def criar_livro(self):
         """Tarefa: criar livro"""
         self.livro_counter += 1
@@ -23,12 +23,12 @@ class BookAPIUser(HttpUser):
         self.client.post("/livros",
                         json=livro)
     
-    @task(1)  # Peso 1
+    @task(1) 
     def listar_livros(self):
         """Tarefa: listar livros"""
         self.client.get("/livros")
     
-    @task(2)  # Peso 2
+    @task(2) 
     def obter_livro(self):
         """Tarefa: obter livro específico"""
         livro_id = (self.livro_counter % 10) + 1

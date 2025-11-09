@@ -12,15 +12,13 @@ Api utilizando micro framework [Flask](https://flask.palletsprojects.com/en/2.3.
 ### Instalação 
 
 - Faça download do [python](https://www.python.org/downloads/).
-- Instale o Flask executando no terminal: ` pip install Flask `
+- Crie o ambiente virtual: ``
+- Instale o Flask executando no terminal: `pip install -r requirements.txt `
 - Por fim execute o proejto: ` python app.py `
 
 ### Testes
 
-- Rodar os testes: `python -m pytest tests/test_api.py`
-- Rodar testes com o cov: `python -m pytest tests/test_api.py --cov=controller`
-- Gerar relatório html: `coverage html`
+- Rodar testes: `pytest -v`
+- Rodar o locust: `locust -f tests/test_carga.py`
 
-### Contato
-
-<a href="https://www.linkedin.com/in/vitor-santos-01/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a>      
+   

@@ -1,16 +1,13 @@
 import pytest
-from app import Livro
-from unittest.mock import Mock, patch
+from controller.controller import Livro
 
 class TestLivroModel:
     """Testes da classe Livro (Unit Tests)"""
     
     def test_livro_criacao_sucesso(self):
         """Teste: criar livro com sucesso"""
-        # Arrange
         livro = Livro(1, "1984", "George Orwell", 1949, "978-0451524935")
         
-        # Act & Assert
         assert livro.id == 1
         assert livro.titulo == "1984"
         assert livro.autor == "George Orwell"
@@ -56,6 +53,6 @@ class TestValidacaoLivro:
     def test_isbn_formato(self):
         """Teste: ISBN tem formato válido"""
         livro = Livro(1, "Livro", "Autor", 2020, "978-0451524935")
-        # ISBN válido tem entre 10 e 13 dígitos
+        
         isbn_numeros = livro.isbn.replace("-", "")
         assert len(isbn_numeros) in [10, 13]

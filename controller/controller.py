@@ -1,6 +1,7 @@
 from flask import Blueprint, jsonify, request
 
 user_bp = Blueprint('user_bp', __name__, url_prefix='/')
+
 livros_db = []
 
 class Livro:
@@ -38,7 +39,6 @@ def cadastrar_livro():
     """Cadastra um novo livro"""
     data = request.get_json()
     
-    # Validação
     if not data or not all(k in data for k in ['titulo', 'autor', 'ano', 'isbn']):
         return jsonify({"erro": "Campos obrigatórios faltando"}), 400
     

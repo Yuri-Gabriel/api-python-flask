@@ -1,0 +1,8 @@
+.venv
+.vscode
+.benchmarks
+.pytest_cache
+__pycache__
+controller/__pycache__
+/htmlcov
+tests/__pycache__

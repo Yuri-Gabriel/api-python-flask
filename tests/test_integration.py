@@ -6,13 +6,11 @@ class TestIntegracaoAPI:
     
     def test_criar_e_consultar_livro(self, client, cleanup_db, livro_exemplo):
         """Teste: criar livro e recuperar"""
-        # Criar
         response_create = client.post('/livros',
                                      data=json.dumps(livro_exemplo),
                                      content_type='application/json')
         assert response_create.status_code == 201
         
-        # Consultar
         response_get = client.get('/livros/1')
         assert response_get.status_code == 200
         
@@ -21,17 +19,14 @@ class TestIntegracaoAPI:
     
     def test_fluxo_completo_crud(self, client, cleanup_db, livro_exemplo):
         """Teste: fluxo completo de CRUD"""
-        # CREATE
         response_create = client.post('/livros',
                                      data=json.dumps(livro_exemplo),
                                      content_type='application/json')
         assert response_create.status_code == 201
         
-        # READ
         response_read = client.get('/livros/1')
         assert response_read.status_code == 200
         
-        # UPDATE
         livro_atualizado = {
             "titulo": "1984 - Nova Edição",
             "autor": livro_exemplo['autor'],
@@ -43,11 +38,9 @@ class TestIntegracaoAPI:
                                     content_type='application/json')
         assert response_update.status_code == 200
         
-        # DELETE
         response_delete = client.delete('/livros/1')
         assert response_delete.status_code == 200
         
-        # Verificar deleção
         response_verify = client.get('/livros/1')
         assert response_verify.status_code == 404
     
@@ -59,7 +52,6 @@ class TestIntegracaoAPI:
                        data=json.dumps(livro),
                        content_type='application/json')
         
-        # Listar
         response = client.get('/livros')
         assert response.status_code == 200
         
